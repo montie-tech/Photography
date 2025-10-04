@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us</title>
-  <link rel="stylesheet" href="../style.css">
-</head>
-<style>
-  /* ===== CONTACT PAGE STYLING ===== */
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* ===== CONTACT PAGE STYLING ===== */
+
+    /* ===== CONTACT PAGE STYLING ===== */
 
 /* General Reset */
 body {
@@ -19,7 +20,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Header (uses same style from main site) */
+/* Header */
 header {
   background: #222;
   color: white;
@@ -28,6 +29,7 @@ header {
   align-items: center;
   padding: 1rem 1.5rem;
   position: relative;
+  flex-wrap: wrap;
 }
 
 header h1 {
@@ -55,7 +57,7 @@ header h1 {
   color: #f39c12;
 }
 
-/* Hamburger icon (mobile only) */
+/* Hamburger Menu */
 .menu-toggle {
   display: none;
   font-size: 1.8rem;
@@ -65,10 +67,10 @@ header h1 {
   cursor: pointer;
 }
 
-/* ===== CONTACT FORM SECTION ===== */
+/* ===== CONTACT FORM ===== */
 main section {
   max-width: 600px;
-  margin: 50px auto;
+  margin: 60px auto;
   background: white;
   padding: 30px 40px;
   border-radius: 10px;
@@ -91,7 +93,6 @@ form {
 
 label {
   font-weight: bold;
-  margin-bottom: 5px;
   color: #555;
 }
 
@@ -102,6 +103,7 @@ textarea {
   border: 1px solid #ccc;
   font-size: 1rem;
   transition: border-color 0.3s;
+  width: 100%;
 }
 
 input:focus,
@@ -115,7 +117,6 @@ textarea {
   min-height: 100px;
 }
 
-/* Button Styling (consistent with site theme) */
 .btn {
   background: #f39c12;
   color: white;
@@ -132,22 +133,22 @@ textarea {
   color: white;
 }
 
-/* Success Message */
 #formMessage {
   margin-top: 10px;
   text-align: center;
   font-weight: bold;
 }
 
-/* ===== CALL SECTION (Reuses previous style) ===== */
+/* ===== CALL SECTION (NO BACKGROUND) ===== */
 .call-section {
-  background: transparent;
+  background: transparent; /* Remove background completely */
   display: flex;
-  justify-content: center; /* center horizontally */
-  align-items: center; /* center vertically (if there's height) */
-  margin: 50px 0; /* add spacing above and below */
-  padding: 0 350px;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically (if there's height) */
+  margin: 40px 0;
+  padding: 0 ;
   box-shadow: none;
+  width: 100%;
 }
 
 .call-button {
@@ -160,16 +161,14 @@ textarea {
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 10px rgba(245, 160, 7, 0.3);
-  
 }
 
 .call-button:hover {
   background-color: #e69500;
   transform: scale(1.05);
   box-shadow: 0 6px 14px rgba(245, 160, 7, 0.4);
-  color:black;
+  color: black;
 }
-
 
 /* ===== FOOTER ===== */
 footer {
@@ -212,11 +211,15 @@ footer {
     margin: 30px 15px;
     padding: 25px;
   }
+
+  .call-section {
+    margin: 8px 0;
+  }
 }
 
 @media (max-width: 480px) {
   header h1 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   h4 {
@@ -225,22 +228,17 @@ footer {
 
   .btn,
   .call-button {
-    width: 100%;
-  }
-
-  form {
-    gap: 12px;
+    width: 70%;
+    text-align: center;
   }
 }
 
-</style>
+  </style>
+</head>
 <body>
   <header>
     <h1>Vinceearts Photography</h1>
-
-    <!-- Hamburger Icon -->
     <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
-
     <nav class="nav-links">
       <ul>
         <li><a href="../index.html">Home</a></li>
@@ -257,10 +255,10 @@ footer {
       <h4>Contact Us</h4>
       <form id="contactForm">
         <label>Name:</label>
-        <input type="text" name="name" required>
+        <input type="text" name="name" required />
 
         <label>Email:</label>
-        <input type="email" name="email" required>
+        <input type="email" name="email" required />
 
         <label>Message:</label>
         <textarea name="message" required></textarea>
@@ -268,12 +266,14 @@ footer {
         <button type="submit" class="btn">Send</button>
       </form>
 
-      <p id="formMessage" style="display:none; color:green;">✅ Your message has been sent successfully!</p>
+      <p id="formMessage" style="display:none; color:green;">
+        ✅ Your message has been sent successfully!
+      </p>
     </section>
 
     <!-- Call Us Button Section -->
     <section class="call-section">
-      <a href="tel:0759587215" class="call-button"> Call Us</a>
+      <a href="tel:0759587215" class="call-button">Call Us</a>
     </section>
   </main>
 
@@ -295,7 +295,7 @@ footer {
         const response = await fetch("https://formspree.io/f/xjkabzpa", {
           method: "POST",
           body: formData,
-          headers: { 'Accept': 'application/json' }
+          headers: { Accept: "application/json" },
         });
 
         if (response.ok) {

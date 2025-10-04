@@ -162,6 +162,31 @@ button.btn:hover {
   color: #f0eeec;
 }
 
+.call-button {
+  display: inline-block;
+  background: #f39c12;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.02rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(243, 156, 18, 0.3);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  padding-left: 40%;
+}
+
+.call-button:hover {
+  color: #222;
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.5);
+}
+
+
 /* ===== Footer ===== */
 footer {
   background: #222;

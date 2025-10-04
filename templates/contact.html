@@ -4,8 +4,236 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
+<style>
+  /* ===== CONTACT PAGE STYLING ===== */
+
+/* General Reset */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header (uses same style from main site) */
+header {
+  background: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #f39c12;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #f39c12;
+}
+
+/* Hamburger icon (mobile only) */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== CONTACT FORM SECTION ===== */
+main section {
+  max-width: 600px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h4 {
+  text-align: center;
+  color: #f39c12;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+input,
+textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #f39c12;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Button Styling (consistent with site theme) */
+.btn {
+  background: #f39c12;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #222;
+  color: white;
+}
+
+/* Success Message */
+#formMessage {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* ===== CALL SECTION (Reuses previous style) ===== */
+.call-section {
+  background: transparent;
+  display: flex;
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically (if there's height) */
+  margin: 50px 0; /* add spacing above and below */
+  padding: 0 350px;
+  box-shadow: none;
+}
+
+.call-button {
+  background-color: #f5a007;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(245, 160, 7, 0.3);
+  
+}
+
+.call-button:hover {
+  background-color: #e69500;
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(245, 160, 7, 0.4);
+  color:black;
+}
+
+
+/* ===== FOOTER ===== */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  border-top: 3px solid #444;
+  font-size: 0.95rem;
+}
+
+/* ===== RESPONSIVENESS ===== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: #222;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links.show {
+    display: block;
+  }
+
+  main section {
+    margin: 30px 15px;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  .btn,
+  .call-button {
+    width: 100%;
+  }
+
+  form {
+    gap: 12px;
+  }
+}
+
+</style>
 <body>
   <header>
     <h1>Vinceearts Photography</h1>

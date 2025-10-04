@@ -69,8 +69,8 @@ header {
   color: white;
   background-size: cover;
   background-position: center;
-  animation: changeBg 60s infinite ease-in-out;
-  -webkit-animation: changeBg 60s infinite ease-in-out;
+  animation: changeBg 120s infinite ease-in-out;
+  -webkit-animation: changeBg 120s infinite ease-in-out;
 }
 
 @keyframes changeBg {

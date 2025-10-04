@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Photography</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* ===== Global Styles ===== */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f8f8f8;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    /* ===== Header ===== */
+    header {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header h1 {
+      font-size: 1.15rem;
+      letter-spacing: 1px;
+      padding-left:40%;
+    }
+
+    header h1:hover {
+      color: white;
+    }
+
+    /* ===== Gallery Layout ===== */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* ===== Image Cards ===== */
+    .cardimages {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cardimages:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+
+    .cardimages img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ===== Wedding Section ===== */
+    .wedding {
+      background: #e6e6e6;
+      color: #222;
+      border-radius: 10px;
+      width: 85%;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 30px 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .wedding h2 {
+      font-size: 1.15rem;
+      margin-bottom: 20px;
+      color: #000;
+      letter-spacing: 0.5px;
+    }
+
+    ol {
+      background: #fff;
+      padding: 25px 35px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      max-width: 800px;
+      margin: auto;
+      text-align: left;
+    }
+
+    ol > li {
+      margin-bottom: 25px;
+    }
+
+    ol li strong {
+      font-size: 1.1rem;
+      color: #000;
+    }
+
+    ol p {
+      margin: 8px 0;
+    }
+
+    ul {
+      margin-top: 10px;
+      padding-left: 20px;
+    }
+
+    li ul li {
+      margin-bottom: 8px;
+    }
+
+    /* ===== Back Button ===== */
+    a.back-link {
+      display: inline-block;
+      margin: 25px auto 10px;
+      text-decoration: none;
+      color: white;
+      background: #007bff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    a.back-link:hover {
+      background: #0056b3;
+      transform: translateY(-2px);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 40px;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+
+      .wedding {
+        width: 90%;
+        padding: 20px;
+      }
+
+      .cardimages img {
+        height: 220px;
+      }
+
+      ol {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Wedding Photography Gallery</h1>
+  </header>
+
+  <main>
+    <!-- Gallery Section -->
+    <section class="gallery">
+      <div class="cardimages"><img src="../wedding/IMG_3133.JPG" alt="Outdoor Photography 1"></div>
+      <div class="cardimages"><img src="../wedding/IMG_3134.JPG" alt="Outdoor Photography 2"></div>
+      <div class="cardimages"><img src="../wedding/IMG_3135.JPG" alt="Outdoor Photography 3"></div>
+      <div class="cardimages"><img src="../wedding/IMG_3136.JPG" alt="Outdoor Photography 4"></div>
+      <div class="cardimages"><img src="../wedding/IMG_3137.JPG" alt="Outdoor Photography 5"></div>
+      <div class="cardimages"><img src="../wedding/IMG_3138.JPG" alt="Outdoor Photography 6"></div>
+      <div class="cardimages"><img src="../wedding/IMG_3139.JPG" alt="Outdoor Photography 7"></div>
+    </section>
+
+    <!-- Wedding Package Section -->
+    <section class="wedding">
+      <h2>Wedding Photography Package</h2>
+      <ol>
+        <li>
+          <strong>Pre-Wedding Consultation</strong>
+          <ul>
+            <li>Meeting (in-person or virtual) to discuss the wedding theme, timeline, and preferred photography style.</li>
+            <li>Location scouting and planning (optional).</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Coverage</strong>
+          <p>Choose based on package level:</p>
+          <ul>
+            <li><strong>Basic Package:</strong> 4–5 hours coverage (ceremony & portraits)</li>
+            <li><strong>Standard Package:</strong> 8 hours coverage (preparation, ceremony, reception)</li>
+            <li><strong>Premium Package:</strong> Full-day coverage (morning preparations to late reception)</li>
+            <li>Option to add a second photographer or videographer.</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Deliverables</strong>
+          <ul>
+            <li><strong>Edited Photos:</strong> Professionally retouched high-resolution images.</li>
+            <li><strong>Online Gallery:</strong> Password-protected link for easy viewing and download.</li>
+            <li><strong>USB Drive / Cloud Delivery:</strong> Backup of all final edited photos.</li>
+            <li><strong>Photo Album (optional):</strong> Premium printed photo book.</li>
+            <li><strong>Highlight Slideshow:</strong> A short cinematic slideshow with music (optional).</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Add-ons</strong>
+          <ul>
+            <li>Engagement / pre-wedding photoshoot</li>
+            <li>Drone photography</li>
+            <li>Same-day photo highlights for display at reception</li>
+            <li>Prints and wall art packages</li>
+            <li>Wedding video coverage</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Turnaround Time</strong>
+          <ul>
+            <li>Preview gallery within 1–2 weeks</li>
+            <li>Full gallery within 3–5 weeks</li>
+          </ul>
+        </li>
+
+        <li>
+          <strong>Booking & Payment</strong>
+          <ul>
+            <li>30–50% booking deposit to secure the date</li>
+            <li>Remaining balance due before or on the wedding day</li>
+          </ul>
+        </li>
+      </ol>
+
+      <div style="text-align:center;">
+        <a href="../index.html" class="back-link">⬅ Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Vinceearts Photography. All rights reserved.</p>
+  </footer>
+</body>
+</html>

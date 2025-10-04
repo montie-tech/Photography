@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vin Graphics  Photography</title>
-  <link rel="icon" type="image/png"  href="images/logo.png">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vinceearts Photography</title>
+  <link rel="icon" type="image/png" href="images/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- Navbar -->
- <header>
-  <h1>Vinceearts Photography</h1>
+  <header>
+    <h1>Vinceearts Photography</h1>
 
-  <!-- Hamburger Icon -->
-  <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
+    <!-- Hamburger Icon -->
+    <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
 
-  <nav class="nav-links">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="../templates/contact.html">Contact</a></li>
-      <li><a href="../templates/about.html">About Us</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#booking">Book Appointment</a></li>
-    </ul>
-  </nav>
-</header>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="../templates/contact.html">Contact</a></li>
+        <li><a href="../templates/about.html">About Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#booking">Book Appointment</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -38,112 +38,107 @@
     <h2>Our Photography Services</h2>
     <div class="gallery-grid">
       <div class="card">
-        <img src="../images/birthday.jpg" alt="Wedding Photography">
+        <img src="../images/birthday.jpg" alt="Birthday Photography" />
         <a href="templates/birthday.html"><b>Birthday Photography</b></a>
       </div>
 
       <div class="card">
-        <img src="../images/graduation.jpg" alt="Graduation Photography">
+        <img src="../images/graduation.jpg" alt="Graduation Photography" />
         <a href="templates/graduation.html"><b>Graduation Photography</b></a>
       </div>
 
-     <div class="card">
-        <img src="../wedding/IMG_3133.JPG" alt="Street Photography">
+      <div class="card">
+        <img src="../wedding/IMG_3133.JPG" alt="Wedding Photography" />
         <a href="templates/outdoor.html"><b>Wedding Photography</b></a>
       </div>
 
       <div class="card">
-        <img src="../images/model.jpg" alt="Street Photography">
+        <img src="../images/model.jpg" alt="Model Photography" />
         <a href="templates/model.html"><b>Model Photography</b></a>
       </div>
 
       <div class="card">
-        <img src="../images/outdoor.jpg" alt="Street Photography">
+        <img src="../images/outdoor.jpg" alt="Outdoor Photography" />
         <a href="templates/outdoor.html"><b>Outdoor Photography</b></a>
       </div>
 
       <div class="card">
-        <img src="../images/indoor.jpg" alt="Portrait Photography">
+        <img src="../images/indoor.jpg" alt="Indoor Photography" />
         <a href="templates/indoor.html"><b>Indoor Photography</b></a>
       </div>
 
       <div class="card">
-        <img src="../images/more.jpg" alt="More">
+        <img src="../images/more.jpg" alt="More Catalogue" />
         <a href="templates/more.html"><b>More Catalogue</b></a>
       </div>
-      
     </div>
   </section>
 
   <!-- Booking Section -->
   <section id="booking">
     <h2>Book an Appointment</h2>
-  <form id="bookingForm">
-  <label for="name">Full Name:</label>
-  <input type="text" id="name" required>
+    <form id="bookingForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required />
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
 
-  <label for="service">Select Photography Type:</label>
-  <select id="service" required>
-    <option value="">-- Select --</option>
-    <option value="Babyshower">Black and White Photography </option>
-    <option value="Birthday">Birthday Photography</option>
-    <option value="Graduation">Event Photography </option>
-    <option value="Refreshment">Family Photography</option>
-    <option value="Refreshment">Fashion Photography</option>
-    <option value="Refreshment">Fine art Photography</option>
-    <option value="Refreshment">Food Photography</option>
-    <option value="Indoor">Graduation Photography</option>
-    <option value="Mounting">Indoor Photography</option>
-    <option value="Outdoor">Outdoor Photography</option>
-    <option value="Refreshment">Portrait Photography</option>
-    <option value="Refreshment">Product Photography</option>
-    <option value="Tradition">Real Estate Photography</option>
-    <option value="Wedding">Wedding Photography</option>
-  </select>
+      <label for="service">Select Photography Type:</label>
+      <select id="service" required>
+        <option value="">-- Select --</option>
+        <option value="Black and White Photography">Black and White Photography</option>
+        <option value="Birthday Photography">Birthday Photography</option>
+        <option value="Event Photography">Event Photography</option>
+        <option value="Family Photography">Family Photography</option>
+        <option value="Fashion Photography">Fashion Photography</option>
+        <option value="Fine Art Photography">Fine Art Photography</option>
+        <option value="Food Photography">Food Photography</option>
+        <option value="Graduation Photography">Graduation Photography</option>
+        <option value="Indoor Photography">Indoor Photography</option>
+        <option value="Outdoor Photography">Outdoor Photography</option>
+        <option value="Portrait Photography">Portrait Photography</option>
+        <option value="Product Photography">Product Photography</option>
+        <option value="Real Estate Photography">Real Estate Photography</option>
+        <option value="Wedding Photography">Wedding Photography</option>
+      </select>
 
-  <label for="date">Preferred Date:</label>
-  <input type="date" id="date" required>
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" required />
 
-  <button type="submit" class="btn">Book Appointment</button>
-</form>
-
-<script>
-document.getElementById("bookingForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const service = document.getElementById("service").value;
-  const date = document.getElementById("date").value;
-
-  const message = `Hello, I would like to book a ${service} photography session.\nName: ${name}\nEmail: ${email}\nPreferred Date: ${date}`;
-
-  // Replace with your WhatsApp number (with country code, no + sign)
-  const phoneNumber = "+254759587215";
-  const url = `https://wa.me/${254759587215}?text=${encodeURIComponent(message)}`;
-
-  window.open(url, "_blank");
-});
-</script>
-<script>
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
-</script>
-
-
+      <button type="submit" class="btn">Book Appointment</button>
+    </form>
+  </section>
 
   <!-- Footer -->
   <footer>
     <p>&copy; Vinceearts Photography. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    // Booking form to WhatsApp
+    document.getElementById("bookingForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const service = document.getElementById("service").value;
+      const date = document.getElementById("date").value;
+
+      const message = `Hello, I would like to book a ${service} photography session.\nName: ${name}\nEmail: ${email}\nPreferred Date: ${date}`;
+      const phoneNumber = "254759587215";
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+      window.open(url, "_blank");
+    });
+
+    // Toggle mobile menu
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
 </body>
 </html>

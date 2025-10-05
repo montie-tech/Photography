@@ -75,9 +75,7 @@ header {
 
 @keyframes changeBg {
   0% { background-image: url("../images/landing.jpg"); }
-  25% { background-image: url("../images/landing1.jpg"); }
   50% { background-image: url("../images/landing2.jpg"); }
-  75% { background-image: url("../images/landing3.jpg"); }
   100% { background-image: url("../images/landing4.jpg"); }
 }
 
@@ -224,7 +222,7 @@ footer {
     gap: 12px;
   }
   .hero {
-    height: 70vh;
+    height: 50vh;
     padding: 2rem 1rem;
   }
   .hero h2 { font-size: 1.8rem; }
@@ -237,4 +235,26 @@ footer {
   .gallery-grid { gap: 15px; }
   form { padding: 0 10px; }
   footer { font-size: 0.9rem; padding: 15px; }
+  .hero {
+  position: relative;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  animation: changeBg 720s infinite ease-in-out;
+  -webkit-animation: changeBg 720s infinite ease-in-out;
+}
+
+@keyframes changeBg {
+  0% { background-image: url("../images/landing.jpg"); }
+  25% { background-image: url("../images/landing1.jpg"); }
+  50% { background-image: url("../images/landing2.jpg"); }
+  75% { background-image: url("../images/landing3.jpg"); }
+  100% { background-image: url("../images/landing4.jpg"); }
+}
 }
